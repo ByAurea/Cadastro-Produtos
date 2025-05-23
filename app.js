@@ -3,10 +3,10 @@ const form = document.getElementById("form")
 const inputNome = document.getElementById("nome")
 const inputPreco = document.getElementById("preco")
 const inputCategoria = document.getElementById("categoria")
-const btnEnviar = document.getElementById("btnEnviar")
+const btnCadastrar = document.getElementById("btnCadastrar")
 const cadastros = document.getElementById("cadastros")
 
-btnEnviar.addEventListener("click", function clicar(event){
+btnCadastrar.addEventListener("click", function clicar(event){
     event.preventDefault()
 
     const nome = inputNome.value;
@@ -24,14 +24,15 @@ btnEnviar.addEventListener("click", function clicar(event){
     const cardProdutos = document.createElement('div')
     cardProdutos.innerHTML = `
         <p>Nome: ${nome}</p>
-        <p>Preço: R$${preco}</p>
+        <p>Preço: R$${parseFloat(preco).toFixed(2)}</p>
         <p>Categoria: ${categoria}</p> `
 
-        if (categoria === "Roupas") {
+        if (categoria === "Tecnologia") {
             cardProdutos.style.fontWeight = "bold";
-         } else if (categoria === "Acessorios") {
-            cardProdutos.style.backgroundColor = "pink";
-         }
+         } else if (categoria === "Alimentos") {
+            cardProdutos.style.backgroundColor = "yellow";}
+
+         
 
     cadastros.append(cardProdutos)
     form.reset()

@@ -3,8 +3,13 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 120px;
+    background-image: url(imgs/fundo.jpg);
 }
 
 h2{
  color: pink;
+}
+
+fieldset{
+    background-color: white;
 }
