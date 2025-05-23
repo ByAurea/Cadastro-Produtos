@@ -1,0 +1,10 @@
+body{
+    font-family: "Sour Gummy";
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+h2{
+ color: pink;
+}
